@@ -39,3 +39,11 @@ make delete
 ### Grafana
 
 ![grafana](images/grafana.png)
+
+### Kiali
+
+![grafana](images/kiali.png)
+
+### Jaeger
+
+![grafana](images/jaeger.png)
