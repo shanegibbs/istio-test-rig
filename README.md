@@ -3,6 +3,11 @@
 **WARNING**: updates your default kubeconfig. Make backup or move if needed
 
 * Tried on linux
+* Mac
+  ```shell
+  brew install istioctl
+  brew install k3d
+  ```
 * Creates a local k3s cluster in docker with k3d
 * Deploys istio and addons
 * Deploys gateway config and test app
