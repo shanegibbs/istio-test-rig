@@ -1,5 +1,7 @@
 # Istio Test Setup
 
+**WARNING**: updates your default kubeconfig. Make backup or move if needed
+
 * Tried on linux
 * Creates a local k3s cluster in docker with k3d
 * Deploys istio and addons
@@ -9,6 +11,10 @@ Requirements:
 
 * k3d https://github.com/rancher/k3d#get
 * istioctl https://github.com/istio/istio/releases/tag/1.7.0
+
+Usage:
+
+Most commands are in the [Makefile](Makefile)
 
 ```shell
 # kick things off
@@ -24,4 +30,7 @@ make test
 istioctl dashboard grafana
 istioctl dashboard jaeger
 istioctl dashboard kiali
+
+# delete cluster
+make delete
 ```

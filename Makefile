@@ -3,7 +3,7 @@ start:
 	k3d cluster create --no-lb --k3s-server-arg --disable --k3s-server-arg traefik default
 
 	# install istio
-	istioctl install
+	istioctl install -y
 
 	# enable injection
 	kubectl label namespace default istio-injection=enabled
