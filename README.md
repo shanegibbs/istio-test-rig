@@ -24,7 +24,7 @@ make start
 # NOTE: might need to run twice due to CRD registration delay
 make istio-addons
 
-# test the app works
+# test the app works and fire some requests at it to generate traffic
 make test
 
 # view various dashboards
