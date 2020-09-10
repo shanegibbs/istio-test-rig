@@ -21,6 +21,7 @@ Most commands are in the [Makefile](Makefile)
 make start
 
 # install grafana, prometheus and friends
+# NOTE: might need to run twice due to CRD registration delay
 make istio-addons
 
 # test the app works
@@ -34,3 +35,7 @@ istioctl dashboard kiali
 # delete cluster
 make delete
 ```
+
+### Grafana
+
+![grafana](images/grafana.png)

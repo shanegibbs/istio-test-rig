@@ -1,3 +1,5 @@
+SHELL=/bin/bash
+
 start:
 	# start cluster
 	k3d cluster create --no-lb --k3s-server-arg --disable --k3s-server-arg traefik default
@@ -24,7 +26,8 @@ istio-addons:
 	kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.7/samples/addons/kiali.yaml
 
 test:
-	curl $(shell docker inspect k3d-default-server-0 |jq -r '.[0].NetworkSettings.Networks["k3d-default"].IPAddress')
+	export IP=$(shell docker inspect k3d-default-server-0 |jq -r '.[0].NetworkSettings.Networks["k3d-default"].IPAddress'); \
+	while true; do curl $$IP; sleep 0.2; done
 
 delete:
 	k3d cluster delete default
